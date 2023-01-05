@@ -1,0 +1,12 @@
+.bg-red{
+    background-color: red;
+    color:white;
+}
+
+.visible{
+    display :  block;
+}
+
+.invisible{
+    display: none;
+}
