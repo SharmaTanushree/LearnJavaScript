@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <section>
+    <div>
+        <button> Click Me</button>
+    </div>
+   </section> 
+   <script>
+    let section = document.querySelector('section');
+    let div = document.querySelector('div');
+    let btn = document.querySelector('button');
+
+    section.addEventListener('click',()=>{
+        console.log('Section is clicked');
+    });
+
+    div.addEventListener('click',()=>{
+        console.log('Div is clicked')
+    });
+
+    btn.addEventListener('click',()=>{
+        console.log('Button is clicked');
+    },true);
+   </script>
+</body>
+</html>

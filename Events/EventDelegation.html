@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    li{
+        padding: 1.2rem;
+        border: 2px solid #CCC
+    }
+
+    ul{
+        list-style: none;
+    }
+
+    .highlight{
+        background: #D54;
+    }
+</style>
+<body>
+
+    <ul>
+        <li>
+            <div>Item 1</div>
+            <p>This is item1</p>
+        </li>
+        <li>
+            <div>Item 2</div>
+            <p>This is item2</p>
+        </li>
+        <li>
+            <div>Item 3</div>
+            <p>This is item3</p>
+        </li>
+        <li>
+            <div>Item 4</div>
+            <p>This is item4</p>
+        </li>
+    </ul>
+
+    <script>
+        // 1st way: 
+    //    let list =  document.querySelectorAll('li');
+    //    list.forEach((li)=>{
+    //     li.addEventListener('click',(event)=>{event.target.classList.toggle('highlight')});
+    //    })
+
+       // 2nd way:
+    //    let list =  document.querySelector('ul');
+    //    list.addEventListener('click',(event)=>{event.target.classList.toggle('highlight')});
+
+       //3rd  way:
+
+       let list  = document.querySelector('ul');
+       list.addEventListener('click',(event)=>{
+        event.target.closest('li').classList.toggle('highlight');
+       })
+
+      
+
+    </script>
+    
+</body>
+</html> 

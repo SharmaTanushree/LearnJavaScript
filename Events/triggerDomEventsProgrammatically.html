@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            margin: 8px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <label for="title">title</label>
+        <input type="text" #title/>  
+        <button id="btn4" >Submit</button>     
+    </form>
+    <button id="btn1">Button 1</button>
+    <button id="btn2" >Button 2</button>
+    <button id="btn3" >Button 3</button>
+
+
+    <script>
+        let btn1 = document.getElementById('btn1');
+        let btn2 = document.getElementById('btn2');
+        let btn3 = document.getElementById('btn3');
+
+        let form = document.querySelector('form')
+
+        btn1.addEventListener('click',()=>{
+           console.log('Button 1 is clicked');
+           btn2.click();
+        });
+
+        btn2.addEventListener('click',()=>{
+            console.log('Button 2 is clicked');
+        });
+
+        form.addEventListener('submit',(ev)=>{
+           ev.preventDefault();
+           console.log('Form is filled');
+        })
+
+
+        btn3.addEventListener('click',()=>{
+            console.log('Button 3 is clicked');
+            form.submit();
+        });
+
+        // Observe here:
+        /*
+        When button 1 is clicked, the event is listened by eventlistener attached to button 1, and from
+        event listener of button 1 we have trigeered an event on button2.
+
+        Default behaviour of submit event on form is restricted, but if the submit event is triggered by 
+        the button 3 event listener then submit event is showing its default behaviour.
+        As it is bypassing the event listener added to form on submit event. 
+        */
+
+
+    </script>
+</body>
+</html>
